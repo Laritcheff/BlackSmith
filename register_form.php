@@ -21,29 +21,5 @@ if(isset($_POST['submit'])) {   // если форма отправлена
 	} else {
 		echo '<p class="error">Вы должны заполнить все поля.</p>';
 	}
+echo "sdfdsfsdfdsf";
 ?>
-<!doctype html>
-<html>
-<head>
-<title>Регистрация</title>
-<meta charset="utf-8">
-</head>
-<body>
-<h1>Чтобы сделать заказ, необходима регистрация</h1>
-    <h3>Пожалуйста, введите ниже свои данные:</h3>
-    <form method="post" action="register_form.php">
-        <fieldset>
-            <label for="name">Имя</label>
-            <input type="text" id="name" name="name"><br>
-            <label for="surname">Фамилия</label>
-            <input type="text" id="surame" name="surname"><br>
-            <label for="phone">Телефон</label>  
-            <input type="text" id="phone" name="phone" /><br />  
-            <label for="email">E-mail</label>
-            <input type="text" id="email" name="email" /><br />           
-            <input type="submit" value="Регестрация " name="submit">
-            <input type="reset" value="Очистить" name="reset">
-        </fieldset>
-    </form>
-</body>
-</html>
