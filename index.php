@@ -21,7 +21,7 @@
                 <li><a href='#'>О нас</a></li>
                 <li><a href="#">Новости</a></li>
                 <li><a href='#'>Отзывы</a></li>
-                <li><a href='#'>Наши работы</a></li>
+                <li><a href='products.php'>Наши работы</a></li>
                 <li><a href='#'>Галерея</a></li>
                 <li><a href='registr.php'>Регистрация</a></li>
                 <li><a href='#'>Заказать</a></li>
