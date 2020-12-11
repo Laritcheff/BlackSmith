@@ -12,6 +12,10 @@
     <meta name="HandheldFriendly" content="true" />
     <script async src="java.js"></script>
     <script async src="jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="reset.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
@@ -21,7 +25,7 @@
                 <li><a href='#'>О нас</a></li>
                 <li><a href="#">Новости</a></li>
                 <li><a href='#'>Отзывы</a></li>
-                <li><a href='products.php'>Наши работы</a></li>
+                <li><a href='items.php'>Наши работы</a></li>
                 <li><a href='#'>Галерея</a></li>
                 <li><a href='registr.php'>Регистрация</a></li>
                 <li><a href='#'>Заказать</a></li>

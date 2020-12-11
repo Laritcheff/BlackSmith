@@ -18,7 +18,9 @@ $connect=mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) or die("Ошиб
           <lable for='price'>Цена</lable>
           <input type="text" id="price" name="price"><br>
           <lable for='description'>Описание</lable>
-          <textarea cols='20' rows='5' id='description' name='description'></textarea></br>
+          <textarea row=5 col=10 name='description'></textarea><br>
+          <lable for='category'>Категория</lable>
+          <input type='text' id='category' name='category'></input></br>
           <label for='image'>Add foto:</label><br>
             <input type="hidden" name="max_file_size" value="2000000000"><br>
             <input type="file" id='image' name="image"></br>
@@ -33,13 +35,14 @@ $height=intval($_POST['height']);
 $weight=intval($_POST['weight']);
 $price=intval($_POST['price']);
 $description=$_POST['description'];
+$category=trim($_POST['category']);
 //Add foto
 $img=$_FILES['image']['name'];
 $target=UPLOADPATH.$img;
 move_uploaded_file($_FILES['image']['tmp_name'], $target);
 mysqli_set_charset($connect, "UTF8");
-$query="INSERT INTO weapons(name, width, height, weight, description, image, price) VALUES('$name', '$width','$height','$weight','$description','$img','$price')";
-echo $price;
+$query="INSERT INTO weapons(name, width, height, weight, description, image, price, category) VALUES('$name', '$width','$height','$weight','$description','$img','$price','$category')";
+echo "Зашибиь";
 //$system_error=$_GET["system_error"];
 mysqli_query($connect, $query) or die ('А вот и хрен!');}
 ?>   

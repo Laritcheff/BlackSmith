@@ -3,19 +3,20 @@
 <head>
 <title>Изделия</title>
 <meta charset="utf-8">
-<style>
-    img{
-    width:20%;
-    }
-</style>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" type="text/css" href="reset.css">
 </head>
 <body>
 <?php
 require_once 'app_config.php';
+require_once 'head.php';
     $connect=mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) or handle_error("Возникла проблема с подключением к базе данных.", error_get_last()); 
     mysqli_set_charset($connect, 'UTF8'); 
-        
-    $query = "SELECT name, width, height, weight, description, image, price FROM weapons.weapons WHERE id IS NOT NULL";  
+        $category=$_GET['category'];
+    
+    $query = "SELECT name, width, height, weight, description, image, price FROM weapons.weapons WHERE category=$category";  
     $data = mysqli_query($connect, $query);
 
     echo "<h1>Каталог товаров</h1>";

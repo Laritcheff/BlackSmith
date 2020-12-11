@@ -1,6 +1,7 @@
 <?php
 ob_start();
 require_once 'app_config.php';
+require_once 'head.php';
 $connect=mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) or handle_error("DB ERORR!", error_get_last());
 
 if(isset($_POST['submit'])) {   // если форма отправлена
@@ -26,6 +27,10 @@ if(isset($_POST['submit'])) {   // если форма отправлена
 <head>
 <title>Регистрация</title>
 <meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" type="text/css" href="reset.css">
 </head>
 <body>
 <h1>Чтобы сделать заказ, необходима регистрация</h1>
